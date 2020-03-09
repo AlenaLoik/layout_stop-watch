@@ -8,8 +8,8 @@ h1 {
 
 .watch {
   display: flex;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   justify-content: center;
   align-items: center;
   background-color: pink;
@@ -17,46 +17,50 @@ h1 {
   border: 30px solid #8d3c8d;
   border-radius: 50%;
   margin: auto; }
-  .watch .arrow {
-    display: flex;
-    position: absolute;
-    height: 15px; }
-    .watch .arrow > div {
-      display: flex;
-      width: 100%;
-      border-radius: 7px; }
-    .watch .arrow > div:nth-child(1) {
-      visibility: hidden; }
-  .watch__arrow--small {
-    width: 200px;
-    -webkit-animation: arrow-rotate 3600s infinite;
-            animation: arrow-rotate 3600s infinite; }
-    .watch__arrow--small > div {
-      background-color: #eb1b1b; }
-  .watch__center {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: royalblue;
-    border-radius: 15px;
-    z-index: 1; }
-  .watch__arrow--big {
-    width: 400px;
-    -webkit-animation: arrow-rotate 60s infinite;
-            animation: arrow-rotate 60s infinite; }
-    .watch__arrow--big > div {
-      background-color: royalblue; }
+
+.center {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: royalblue;
+  border-radius: 20px;
+  z-index: 1; }
+
+.center > div {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  height: 15px;
+  border-radius: 7px; }
+
+.minute {
+  width: 150px;
+  background-color: #eb1b1b;
+  -webkit-animation: arrow-rotate 3600s infinite linear;
+          animation: arrow-rotate 3600s infinite linear; }
+
+.second {
+  width: 225px;
+  background-color: royalblue;
+  -webkit-animation: arrow-rotate 60s infinite;
+          animation: arrow-rotate 60s infinite; }
 
 @-webkit-keyframes arrow-rotate {
   from {
+    transform-origin: top left;
     transform: rotate(0deg); }
   to {
+    transform-origin: bottom left;
     transform: rotate(360deg); } }
 
 @keyframes arrow-rotate {
   from {
+    transform-origin: top left;
     transform: rotate(0deg); }
   to {
+    transform-origin: bottom left;
     transform: rotate(360deg); } }
 
 /*# sourceMappingURL=main.css.map */
